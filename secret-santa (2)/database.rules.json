@@ -1,0 +1,1 @@
+{"rules":{".read":false,".write":false,"exchanges":{"$e":{".read":true,"$t":{".write":"newData.exists()",".validate":"newData.hasChildren() && !newData.hasChildren(['name','names','recipient'])","revealed":{".validate":"newData.isBoolean()"},"acknowledged":{".validate":"newData.isBoolean()"},"at":{".validate":"newData.isNumber()"},"$other":{".validate":false}}}}}}

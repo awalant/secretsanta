@@ -1,0 +1,25 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Secret Santa</title>
+<style>
+:root{--bg:#fbf4ea;--card:#fffaf2;--ink:#2b1b17;--red:#a3262a;--green:#1f5d46;--gold:#b98a2c;--line:#e6d3b0}
+@media(prefers-color-scheme:dark){:root{--bg:#1a1211;--card:#251a18;--ink:#f6ebdc;--line:#4a3a2c}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.55 Georgia,"Iowan Old Style",serif;display:flex;justify-content:center;
+ background-image:radial-gradient(circle at 20px 12px,var(--gold) 2px,transparent 3px),radial-gradient(circle at 40px 12px,var(--red) 2px,transparent 3px),radial-gradient(circle at 60px 12px,var(--green) 2px,transparent 3px);background-size:80px 24px;background-repeat:repeat-x}
+main{width:min(640px,100%);margin-top:28px;padding:22px 20px 56px;background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:0 10px 30px #0000001a}
+@media(max-width:560px){main{margin-top:20px;border-radius:0;border-left:0;border-right:0}}
+h1{color:var(--red);font-weight:600;font-size:1.7rem;letter-spacing:.01em;margin:.2em 0 .4em}h1::after{content:"✦";color:var(--gold);margin-left:.4em;font-size:.8em}
+h2{font-size:1.15rem;margin:1.6em 0 .2em;padding-top:.8em;border-top:1px solid var(--line);color:var(--green)}
+label{display:block;margin:.9em 0 .2em;font-size:.95rem}
+textarea,input,select{width:100%;font:inherit;padding:10px 12px;margin-top:4px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:inherit;transition:border-color .2s,box-shadow .2s}
+textarea:focus,input:focus,select:focus{border-color:var(--gold);box-shadow:0 0 0 3px #b98a2c33}
+button{font:inherit;background:var(--green);color:#fff;border:0;border-radius:999px;padding:10px 20px;margin:8px 8px 8px 0;cursor:pointer;transition:transform .15s,box-shadow .15s,opacity .2s}
+button:hover:not(:disabled){transform:translateY(-1px);box-shadow:0 4px 10px #0003}button:active:not(:disabled){transform:none}button:disabled{opacity:.5;cursor:default}
+button.alt{background:var(--red)}button:focus-visible,a:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.row{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:2px 0;border-bottom:1px solid var(--line)}.row button{margin:4px 0;padding:6px 14px;font-size:.9rem}
+.err{color:#b3261e}.ok{color:var(--green)}@media(prefers-color-scheme:dark){.err{color:#ff8a80}.ok{color:#7fd1a8}}
+.wheel{width:min(86vw,400px);margin:12px auto;display:block;filter:drop-shadow(0 8px 14px #0003)}
+.big{font-size:1.7rem;color:var(--red);text-align:center;margin:.4em 0;min-height:2.6em;animation:pop .6s ease-out}
+@keyframes pop{from{opacity:0;transform:scale(.85)}to{opacity:1;transform:none}}
+.note{font-size:.85rem;opacity:.75}code{background:var(--bg);padding:1px 5px;border-radius:5px}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style></head><body><main id="app"></main><script src="app.js"></script></body></html>
